@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Cereal';
+  src:
+    url('./fonts/AirbnbCerealWLt.woff') format('woff'),
+    url('./fonts/AirbnbCerealWLt.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cereal';
+  src:
+    url('./fonts/AirbnbCerealWMd.woff') format('woff'),
+    url('./fonts/AirbnbCerealWMd.woff2') format('woff2');
+  font-weight: 500; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cereal';
+  src:
+    url('./fonts/AirbnbCerealWMd.woff') format('woff'),
+    url('./fonts/AirbnbCerealWMd.woff2') format('woff2');
+  font-weight: normal; /* Regular */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cereal';
+  src:
+    url('./fonts/AirbnbCerealWBd.woff') format('woff'),
+    url('./fonts/AirbnbCerealWBd.woff2') format('woff2');
+  font-weight: 600; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cereal';
+  src:
+    url('./fonts/AirbnbCerealWBlk.woff') format('woff'),
+    url('./fonts/AirbnbCerealWBlk.woff2') format('woff2');
+  font-weight: 700; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal';
+  src: url('./fonts/AirbnbCereal-Light.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal';
+  src: url('./fonts/AirbnbCereal-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal';
+  src: url('./fonts/AirbnbCereal-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal';
+  src: url('./fonts/AirbnbCereal-Bold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Airbnb Cereal';
+  src: url('./fonts/AirbnbCereal_W_XBd.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal';
+  src: url('./fonts/AirbnbCereal-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
