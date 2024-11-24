@@ -1,8 +1,7 @@
 <script setup lang="ts"></script>
-
 <template>
   <div>
-    <RouterView />
+    <h1>Pokemon search</h1>
   </div>
 </template>
 

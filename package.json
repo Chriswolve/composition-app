@@ -14,6 +14,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
   },
@@ -38,6 +39,7 @@
     "prettier-plugin-classnames": "^0.7.4",
     "prettier-plugin-merge": "^0.7.1",
     "prettier-plugin-tailwindcss": "^0.6.9",
+    "sass-embedded": "^1.81.0",
     "stylelint": "^16.10.0",
     "stylelint-config-tailwindcss": "^0.0.7",
     "tailwindcss": "^3.4.15",

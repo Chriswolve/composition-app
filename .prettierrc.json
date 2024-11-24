@@ -9,5 +9,10 @@
     "prettier-plugin-merge"
   ],
   "tailwindConfig": "./tailwind.config.js",
-  "tailwindPreserveWhitespace": true
+  "tailwindPreserveWhitespace": true,
+  "htmlWhitespaceSensitivity": "ignore",
+  "vueIndentScriptAndStyle": true,
+  "singleAttributePerLine": true,
+  "bracketSameLine": false,
+  "proseWrap": "always"
 }

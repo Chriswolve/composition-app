@@ -1,25 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@shared/views/HomeView.vue'
+
+import { appRoutes } from '@shared/routes/app.routes'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: HomeView,
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import('@shared/views/AboutView.vue'),
-    },
-    {
-      path: '/counter',
-      name: 'counter',
-      component: () => import('@/modules/counter/views/CounterView.vue'),
-    },
-  ],
+  routes: appRoutes,
 })
 
 export default router

@@ -1,18 +1,28 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import NavBar from './shared/components/NavBar.vue'
+  import { RouterView } from 'vue-router'
+  import SimpleWrapper from './shared/components/SimpleWrapper.vue'
+
+  import Logo from '@/assets/vite.svg'
+
+  import NavBar from './shared/components/NavBar.vue'
+
+  import { layoutClasses, wrapperClasses } from './shared/styles/app.styles'
+
+  import { appRoutes } from './shared/routes/app.routes'
+
+  console.log(appRoutes)
 </script>
 
 <template>
-  <div class="container mx-auto flex h-screen flex-col py-3">
-    <NavBar />
+  <div :class="layoutClasses">
+    <NavBar
+      :logo="Logo"
+      :navigation="appRoutes"
+    />
 
-    <div
-      class="mt-3 grow rounded border border-zinc-800 bg-gray-100 p-4 shadow-md
-        dark:border-zinc-700 dark:bg-zinc-900"
-    >
+    <SimpleWrapper :class="wrapperClasses">
       <RouterView />
-    </div>
+    </SimpleWrapper>
   </div>
 </template>
 
