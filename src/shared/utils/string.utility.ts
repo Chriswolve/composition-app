@@ -1,4 +1,4 @@
-export function capitalize(str: string) {
+export function capitalize(str: string | undefined) {
   if (!str) return str // Maneja strings vacíos o nulos
   return str.charAt(0).toUpperCase() + str.slice(1)
 }

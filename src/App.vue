@@ -8,16 +8,14 @@
 
   import { layoutClasses, wrapperClasses } from './shared/styles/app.styles'
 
-  import { appRoutes } from './shared/routes/app.routes'
-
-  console.log(appRoutes)
+  import { routes } from '@/router/routes'
 </script>
 
 <template>
   <div :class="layoutClasses">
     <NavBar
       :logo="Logo"
-      :navigation="appRoutes"
+      :navigation="routes"
     />
 
     <SimpleWrapper :class="wrapperClasses">
