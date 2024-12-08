@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import BasicButton from '@shared/components/BasicButton.vue'
-  import IconPlus from '@shared/components/icons/IconPlus.vue'
-  import IconMinus from '@shared/components/icons/IconMinus.vue'
+  import { IconPlus, IconMinus } from '@shared/icons'
+
   import { computed } from 'vue'
   import { useCounter } from '../hooks/useCounter'
 
