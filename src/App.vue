@@ -1,42 +1,20 @@
 <script setup lang="ts">
-  import { ref, provide, onMounted, onUnmounted } from 'vue'
-  import { RouterView } from 'vue-router'
+  import { ref } from 'vue'
+
   import SimpleWrapper from './shared/components/SimpleWrapper.vue'
-
-  import Logo from '@/assets/vite.svg'
-
   import NavBar from './shared/components/NavBar/NavBar.vue'
+  import Logo from '@/assets/vite.svg'
 
   import { layoutClasses, wrapperClasses } from './shared/styles/app.styles'
 
-  import { routes } from '@/router/routes'
+  import { useOuterClick } from './shared/hooks/useOuterClick'
+  import { useRouterNavigation } from './shared/hooks/useRouterNavigation'
 
   const navbar = ref<null | { root: HTMLElement }>(null)
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (!navbar.value) return
+  const { navigation } = useRouterNavigation()
 
-    const target = event.target as Node
-    if (!navbar.value.root.contains(target)) {
-      incrementOuterClick()
-    }
-  }
-
-  onMounted(() => {
-    document.addEventListener('click', handleClickOutside)
-  })
-
-  onUnmounted(() => {
-    document.removeEventListener('click', handleClickOutside)
-  })
-
-  const outerClicks = ref(0)
-
-  const incrementOuterClick = () => {
-    outerClicks.value++
-  }
-
-  provide('outerClick', outerClicks)
+  useOuterClick(navbar)
 </script>
 
 <template>
@@ -44,7 +22,7 @@
     <NavBar
       ref="navbar"
       :logo="Logo"
-      :navigation="routes"
+      :navigation="navigation"
     />
 
     <SimpleWrapper :class="wrapperClasses">
