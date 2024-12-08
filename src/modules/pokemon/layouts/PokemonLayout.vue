@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  import ErrorBoundary from '@shared/components/ErrorBoundary.vue'
+  //import ErrorBoundary from '@shared/components/ErrorBoundary.vue'
 </script>
 
 <template>
   <div class="flex w-full flex-col items-center justify-center">
-    <ErrorBoundary>
+    <!-- <ErrorBoundary>
       <template #default>
         <RouterView v-slot="{ Component }">
           <Suspense timeout="0">
@@ -18,7 +18,9 @@
       <template #error="{ error }">
         <div class="error">Error: {{ error?.message }}</div>
       </template>
-    </ErrorBoundary>
+    </ErrorBoundary> -->
+
+    <RouterView></RouterView>
   </div>
 </template>
 
