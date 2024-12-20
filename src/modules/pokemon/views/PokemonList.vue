@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { watch } from 'vue'
   import { usePokemon } from '../hooks/usePokemon'
   import {
     titleClasses,
@@ -8,6 +9,15 @@
   } from '../styles/pokemonList.styles'
 
   const { pokemon, count, isLoading } = usePokemon()
+
+  watch(
+    () => pokemon.value,
+    (values) => {
+      if (values.length >= 45) {
+        pokemon.value = values.slice(0, 1)
+      }
+    },
+  )
 </script>
 <template>
   <div :class="titleClasses">Pokemon List {{ count }}</div>

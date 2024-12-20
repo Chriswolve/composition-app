@@ -1,14 +1,15 @@
 <script setup lang="ts">
-  import { computed, ref } from 'vue'
+  import { computed, onMounted, ref } from 'vue'
   import type { IPokemon } from '../types/IPokemon'
   import { getPokemon } from '../api/pokemonApi'
   import { capitalize } from '@shared/utils/string.utility'
 
   const pokemon = ref<IPokemon>()
-
-  pokemon.value = await getPokemon()
-
   const moves = computed(() => pokemon.value?.moves.slice(0, 5) ?? [])
+
+  onMounted(async () => {
+    pokemon.value = await getPokemon()
+  })
 </script>
 <template>
   <div>

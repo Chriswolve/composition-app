@@ -8,7 +8,7 @@ export const titleClasses = classNames(
 export const wraperClasses = classNames('flex flex-wrap justify-center')
 
 export const pokemonClasses = classNames(
-  'flex w-1/6 flex-col items-center justify-center',
+  'flex flex-col items-center justify-center',
   'm-2',
 )
 
